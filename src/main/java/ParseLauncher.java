@@ -3,6 +3,7 @@ import org.jsoup.nodes.Document;
 
 import java.awt.EventQueue;
 
+import javax.print.Doc;
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
@@ -108,10 +109,14 @@ public class ParseLauncher {
         JMenuItem mntmNewMenuItem_3 = new JMenuItem("New menu item");
         mnNewMenu.add(mntmNewMenuItem_3);
 
-        JMenuItem mntmNewMenuItem_4 = new JMenuItem("Parse HeadHunter");
-        mntmNewMenuItem.addActionListener(new ActionListener() {
+        JMenuItem mntmNewMenuItem_4 = new JMenuItem("SuperJob");
+        mntmNewMenuItem_4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    textArea.setText(SuperJob.getResult());
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
 
 
             }

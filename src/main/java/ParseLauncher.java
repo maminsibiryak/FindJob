@@ -82,7 +82,7 @@ public class ParseLauncher {
         });
         mnNewMenu.add(mntmNewMenuItem);
 
-        JMenuItem mntmNewMenuItem_1 = new JMenuItem("Хозяева вернутся");
+        JMenuItem mntmNewMenuItem_1 = new JMenuItem("День рождения");
         mntmNewMenuItem_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 aTimer timer = new aTimer();
@@ -90,8 +90,8 @@ public class ParseLauncher {
                 try {
                     LocalDate localDate =  LocalDate.now();
 
-
-                    String str = timer.getFinal();
+                    String textField = "2018/04/28 00:00:00";
+                    String str = timer.getFinal(textField);
                     textArea.setText("Today"+localDate+"\n"+"Осталось "+str);
                 }
                 catch (Exception e1){

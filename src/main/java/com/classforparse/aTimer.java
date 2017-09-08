@@ -6,13 +6,14 @@ import java.text.SimpleDateFormat;
 public class aTimer {
 
 
-    public String getFinal(){
+    public String getFinal(String data){
+        String dataEnd = data;
         SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String result="";
         long timeUp = 0;
         int count = 0;
         try {
-            timeUp = format.parse("2017/09/03 00:00:00").getTime();
+            timeUp = format.parse(dataEnd).getTime();
 
             while (count<1) {
 

@@ -82,7 +82,7 @@ public class ParseLauncher {
         });
         mnNewMenu.add(mntmNewMenuItem);
 
-        JMenuItem mntmNewMenuItem_1 = new JMenuItem("День рождения");
+        JMenuItem mntmNewMenuItem_1 = new JMenuItem("День рождения!");
         mntmNewMenuItem_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 aTimer timer = new aTimer();
